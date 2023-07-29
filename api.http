@@ -1,0 +1,19 @@
+GET http://localhost:8080/broken/inside?query=micronaut
+
+###
+
+GET http://localhost:8080/broken/foo?query=micronaut
+
+###
+
+POST http://localhost:8080/broken/bar?query=micronaut
+
+###
+
+GET http://localhost:8080/working/foo?query=micronaut
+
+###
+
+POST http://localhost:8080/working/bar?query=micronaut
+
+###
