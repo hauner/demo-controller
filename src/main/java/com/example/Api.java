@@ -10,5 +10,5 @@ public interface Api {
     String foo(@QueryValue(value = "query") String query);
 
     @Post(uri = "/broken/bar", produces = {"text/plain"})
-    String bar(@QueryValue(value = "query") String query/*, @RequestAttribute("a-request-attribute") String attribute*/);
+    String bar(@QueryValue(value = "query") String query);
 }

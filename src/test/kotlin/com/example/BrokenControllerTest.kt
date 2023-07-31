@@ -17,7 +17,6 @@ class BrokenControllerTest(
 ) : BehaviorSpec({
 
     Given("BrokenController") {
-
         forAll(
             row(HttpRequest.GET("/broken/inside?query=inside-foo"), "inside-foo"),
             row(HttpRequest.GET<Any>("/broken/foo?query=foo"), "foo"),
@@ -29,7 +28,7 @@ class BrokenControllerTest(
                     String::class.java
                 )
 
-                Then("response status should be as expected") {
+                Then("response should be as expected") {
                     assertSoftly(httpResponse) {
                         status shouldBe HttpStatus.OK
                         body.get() shouldBe expectedBody
