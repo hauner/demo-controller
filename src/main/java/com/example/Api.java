@@ -3,7 +3,6 @@ package com.example;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.QueryValue;
-import io.micronaut.http.annotation.RequestAttribute;
 
 public interface Api {
 
@@ -11,5 +10,5 @@ public interface Api {
     String foo(@QueryValue(value = "query") String query);
 
     @Post(uri = "/broken/bar", produces = {"text/plain"})
-    String bar(@QueryValue(value = "query") String query, @RequestAttribute("a-request-attribute") String attribute);
+    String bar(@QueryValue(value = "query") String query/*, @RequestAttribute("a-request-attribute") String attribute*/);
 }
