@@ -1,0 +1,9 @@
+micronaut:
+   server:
+     netty:
+       log-level: TRACE
+
+logger:
+  levels:
+    io.netty: TRACE
+    io.micronaut.http: TRACE
