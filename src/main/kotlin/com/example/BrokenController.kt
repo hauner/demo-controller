@@ -16,7 +16,8 @@ class BrokenController: Api {
         return query
     }
 
-    override fun bar(query: String, attribute: String): String {
-        return "$query with attribute $attribute"
+    override fun bar(query: String/*, attribute: String*/): String {
+        //return "$query with attribute $attribute"
+        return query
     }
 }
